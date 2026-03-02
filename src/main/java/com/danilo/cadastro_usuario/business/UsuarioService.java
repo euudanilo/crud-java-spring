@@ -25,4 +25,9 @@ public class UsuarioService {
     public List<Usuario> listarTodosUsuarios() {
         return repository.findAll();
     }
+
+    public Usuario buscarUsuarioPorEmail(String email) {
+        return repository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Usuario não encotrado!"));
+    }
 }

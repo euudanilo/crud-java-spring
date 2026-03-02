@@ -24,4 +24,9 @@ public class UsuarioController {
     public List<Usuario> listarUsuarios() {
         return service.listarTodosUsuarios();
     }
+
+    @GetMapping("/{email}")
+    public ResponseEntity<Usuario> buscarUsuario(@PathVariable String email) {
+        return ResponseEntity.ok(service.buscarUsuarioPorEmail(email));
+    }
 }
