@@ -39,4 +39,8 @@ public class UsuarioService {
 
         return repository.save(usuario);
     }
+
+    public void deletarPorEmail(String email) {
+        repository.deleteByEmail(email);
+    }
 }

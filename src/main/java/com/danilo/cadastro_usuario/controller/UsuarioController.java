@@ -34,4 +34,9 @@ public class UsuarioController {
     public ResponseEntity<Usuario> atualizarUsuario(@PathVariable String email, @RequestBody Usuario usuario) {
         return ResponseEntity.ok(service.atualizarUsuario(email, usuario));
     }
+
+    @DeleteMapping("/{email}")
+    public void deletarUsuario(@PathVariable String email) {
+        service.deletarPorEmail(email);
+    }
 }
