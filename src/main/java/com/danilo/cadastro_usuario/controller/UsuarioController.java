@@ -29,4 +29,9 @@ public class UsuarioController {
     public ResponseEntity<Usuario> buscarUsuario(@PathVariable String email) {
         return ResponseEntity.ok(service.buscarUsuarioPorEmail(email));
     }
+
+    @PutMapping("/{email}")
+    public ResponseEntity<Usuario> atualizarUsuario(@PathVariable String email, @RequestBody Usuario usuario) {
+        return ResponseEntity.ok(service.atualizarUsuario(email, usuario));
+    }
 }

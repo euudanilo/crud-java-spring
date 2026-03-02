@@ -30,4 +30,13 @@ public class UsuarioService {
         return repository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("Usuario não encotrado!"));
     }
+
+    public Usuario atualizarUsuario(String email, Usuario novoUsuario) {
+        Usuario usuario = buscarUsuarioPorEmail(email);
+
+        usuario.setNome(novoUsuario.getNome());
+        usuario.setEmail(novoUsuario.getEmail());
+
+        return repository.save(usuario);
+    }
 }
