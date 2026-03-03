@@ -2,6 +2,7 @@ package com.danilo.cadastro_usuario.business;
 
 import com.danilo.cadastro_usuario.infrastructure.entity.Usuario;
 import com.danilo.cadastro_usuario.infrastructure.exceptions.EmailJaCadastradoException;
+import com.danilo.cadastro_usuario.infrastructure.exceptions.UsuarioNaoEncontradoException;
 import com.danilo.cadastro_usuario.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -30,8 +31,8 @@ public class UsuarioService {
     }
 
     public Usuario buscarUsuarioPorEmail(String email) {
-        return repository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Usuario não encotrado!"));
+        return repository.findByEmail(email) // Procure no banco um usuário com esse email.
+                .orElseThrow(() -> new UsuarioNaoEncontradoException("Usuario não encontrado!")); // Se encontrar, devolva o usuário. Se não encontrar, lance um erro dizendo que o usuário não foi encontrado.
     }
 
     public Usuario atualizarUsuario(String email, Usuario novoUsuario) {
