@@ -35,7 +35,15 @@ public class UsuarioService {
     }
 
     public Usuario atualizarUsuario(String email, Usuario novoUsuario) {
+
         Usuario usuario = buscarUsuarioPorEmail(email);
+
+        if (!usuario.getEmail().equals(novoUsuario.getEmail())) {
+
+            if (repository.exitsByEmail(novoUsuario.getEmail())) {
+                throw new EmailJaCadastradoException("Novo email já está em uso");
+            }
+        }
 
         usuario.setNome(novoUsuario.getNome());
         usuario.setEmail(novoUsuario.getEmail());
