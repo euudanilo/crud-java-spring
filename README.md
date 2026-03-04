@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge" />
 </p>
 
----
+<hr>
 
 <h2>📌 Sobre o Projeto</h2>
 
@@ -24,7 +24,12 @@ O projeto implementa um CRUD completo de usuários com separação clara de cama
 tratamento global de exceções e testes unitários isolados.
 </p>
 
----
+<h3>🎬 Demonstração do CRUD</h3>
+<p>
+<img src="https://i.imgur.com/kLPj7qb.gif" alt="Demonstração do CRUD" />
+</p>
+
+<hr>
 
 <h2>🧠 Arquitetura</h2>
 
@@ -40,7 +45,7 @@ Controller → Service → Repository → Database
   <li><strong>GlobalExceptionHandler</strong></li>
 </ul>
 
----
+<hr>
 
 <h2>🛠️ Tecnologias Utilizadas</h2>
 
@@ -55,7 +60,7 @@ Controller → Service → Repository → Database
   <li>Mockito</li>
 </ul>
 
----
+<hr>
 
 <h2>📂 Estrutura do Projeto</h2>
 
@@ -75,7 +80,7 @@ cadastro-usuario
 └── README.md
 </pre>
 
----
+<hr>
 
 <h2>▶️ Como Executar</h2>
 
@@ -84,6 +89,8 @@ cadastro-usuario
 git clone https://github.com/euudanilo/cadastro-usuario.git
 cd cadastro-usuario
 </pre>
+
+<a href="https://imgur.com/TzyO3vZ"><img src="https://i.imgur.com/TzyO3vZ.gif" title="source: imgur.com" /></a>
 
 <h3>2️⃣ Gerar o build da aplicação</h3>
 
@@ -107,7 +114,7 @@ docker-compose up --build
 http://localhost:8080/usuario
 </pre>
 
----
+<hr>
 
 <h2>🔌 Endpoints</h2>
 
@@ -144,7 +151,7 @@ http://localhost:8080/usuario
   </tr>
 </table>
 
----
+<hr>
 
 <h2>📥 Exemplo de Requisição</h2>
 
@@ -155,7 +162,7 @@ http://localhost:8080/usuario
 }
 </pre>
 
----
+<hr>
 
 <h2>🧪 Testes</h2>
 
@@ -167,7 +174,11 @@ mvn test
 Os testes utilizam Mockito para mockar dependências e validar respostas HTTP.
 </p>
 
----
+<p>
+<img src="https://i.imgur.com/iQpSmB8.gif" alt="Testes Maven" />
+</p>
+
+<hr>
 
 <h2>⚙️ Configuração do Banco</h2>
 
@@ -180,7 +191,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 <p>Nenhuma variável de ambiente é necessária para execução via Docker.</p>
 
----
+<hr>
 
 <h2>🚀 Melhorias Futuras</h2>
 
@@ -192,7 +203,7 @@ spring.jpa.hibernate.ddl-auto=update
   <li>Deploy em nuvem</li>
 </ul>
 
----
+<hr>
 
 <h2>📄 Licença</h2>
 
