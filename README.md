@@ -90,8 +90,6 @@ git clone https://github.com/euudanilo/cadastro-usuario.git
 cd cadastro-usuario
 </pre>
 
-<a href="https://imgur.com/TzyO3vZ"><img src="https://i.imgur.com/TzyO3vZ.gif" title="source: imgur.com" /></a>
-
 <h3>2️⃣ Gerar o build da aplicação</h3>
 
 <p><strong>Linux / Mac:</strong></p>
