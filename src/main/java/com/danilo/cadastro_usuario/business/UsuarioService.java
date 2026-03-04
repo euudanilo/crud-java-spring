@@ -6,6 +6,7 @@ import com.danilo.cadastro_usuario.infrastructure.exceptions.UsuarioNaoEncontrad
 import com.danilo.cadastro_usuario.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -52,6 +53,7 @@ public class UsuarioService {
         return repository.save(usuario);
     }
 
+    @Transactional
     public void deletarPorEmail(String email) {
 
         Usuario usuario = buscarUsuarioPorEmail(email);
