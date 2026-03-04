@@ -181,10 +181,12 @@ Os testes utilizam Mockito para mockar dependências e validar respostas HTTP.
 <h2>⚙️ Configuração do Banco</h2>
 
 <pre>
-spring.datasource.url=jdbc:postgresql://db:5432/cadastro_usuario
+spring.datasource.url=jdbc:postgresql://localhost:5432/cadastro_usuario
 spring.datasource.username=postgres
 spring.datasource.password=postgres
 spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 </pre>
 
 <p>Nenhuma variável de ambiente é necessária para execução via Docker.</p>
