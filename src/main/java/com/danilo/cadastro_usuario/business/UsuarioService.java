@@ -19,7 +19,7 @@ public class UsuarioService {
 
         usuario.setEmail(usuario.getEmail().trim().toLowerCase());
 
-        if(repository.exitsByEmail(usuario.getEmail())) {
+        if(repository.existsByEmail(usuario.getEmail())) {
             throw new EmailJaCadastradoException("Email já cadastrado");
         }
 
@@ -41,7 +41,7 @@ public class UsuarioService {
 
         if (!usuario.getEmail().equals(novoUsuario.getEmail())) {
 
-            if (repository.exitsByEmail(novoUsuario.getEmail())) {
+            if (repository.existsByEmail(novoUsuario.getEmail())) {
                 throw new EmailJaCadastradoException("Novo email já está em uso");
             }
         }

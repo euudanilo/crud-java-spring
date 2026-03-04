@@ -66,7 +66,7 @@ class UsuarioServiceTest {
         usuario.setEmail("novo@dominio.com");
         usuario.setNome("Novo");
 
-        when(repository.exitsByEmail("novo@dominio.com")).thenReturn(false);
+        when(repository.existsByEmail("novo@dominio.com")).thenReturn(false);
         when(repository.save(usuario)).thenReturn(usuario);
 
         Usuario resultado = usuarioService.cadastraUsuario(usuario);
@@ -82,7 +82,7 @@ class UsuarioServiceTest {
         usuario.setEmail("existente@dominio.com");
         usuario.setNome("Existente");
 
-        when(repository.exitsByEmail("existente@dominio.com")).thenReturn(true);
+        when(repository.existsByEmail("existente@dominio.com")).thenReturn(true);
 
         EmailJaCadastradoException exception = assertThrows(
                 EmailJaCadastradoException.class,
@@ -127,7 +127,7 @@ class UsuarioServiceTest {
         novoUsuario.setNome("Atualizado");
 
         when(repository.findByEmail("teste@dominio.com")).thenReturn(Optional.of(usuarioExistente));
-        when(repository.exitsByEmail("existente@dominio.com")).thenReturn(true);
+        when(repository.existsByEmail("existente@dominio.com")).thenReturn(true);
 
         EmailJaCadastradoException exception = assertThrows(
                 EmailJaCadastradoException.class,
